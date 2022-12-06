@@ -1,0 +1,28 @@
+{
+    "python.defaultInterpreterPath": ".local/share/virtualenvs/event-simulator-ASoMzb_s/bin/python",
+    "python.languageServer": "Pylance",
+    // paths where custom modules are derived
+    "python.analysis.extraPaths": [
+       
+    ],
+    "python.autoComplete.extraPaths": [
+        
+    ],
+    // activate colour brackets
+    "editor.bracketPairColorization.enabled": true,
+    // activate the virtual environment automatically
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.activateEnvironment": true,
+    // required to get the custom modules recognised by the python editor and terminal to avoid "ModuleNotFound" error
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src",
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src",
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/src",
+    },
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+}
